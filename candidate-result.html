@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Candidate Result</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/dashboard-style.css"> 
+	</head>
+<body class="wow fadeIn">
+	<!-- header start -->	
+	<header class="navbar dash-header" id="navbar">
+		<div class="navbar-btn">
+			<a class="nav-open-nav" id="open-nav" onclick="openSideBar()" title="Click to open"> 
+				<i class="fa fa-bars"></i>
+			</a>
+			<a class="nav-cls-btn" id="close-nav" onclick="closeSideBar()" title="click to close"> 
+				 <i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<div class="brand">	
+			<a  href="index.html" class="dash-logo" id="logo" title="Quiztech">QuizTech</a>
+		</div>
+	</header>
+	<!-- header end -->
+	
+	<!-- sidebar start -->
+	<aside class="side-nav wow slideInLeft" id="sidenav">
+		<ul class="categories">
+			<li>
+				<a href="dashboard.html" title="Dashboard">
+					<i class="fa fa-dashboard"></i><span>Dashboard</span></a>
+			</li>
+			<li class="drop">
+				<a href="javascript:void(0)" title="Question Bank">
+					<i class="fa  fa-pencil-square"></i><span>Question Bank</span></a>
+				<ul class="side-nav-dropdown">
+					<li><a href="subject.html" title="Subjects">
+						<i class="fa fa-book sub-icon"></i>Subjects</a></li>
+					<li><a href="topic.html" title="Topics">
+						<i class="fa fa-file sub-icon"></i>Topics</a></li>
+					<li><a href="question-type.html" title="Question Type">
+						<i class="fa fa-briefcase sub-icon"></i>Question Type</a></li>
+					<li><a href="objective-ques.html" title="Objective Question">
+						<i class="fa fa-file-text sub-icon"></i>Objective Question</a></li>
+			   </ul>
+			</li>
+			<li>
+				<a href="exam-create.html" title="Exam Creation">
+					<i class="fa fa-pencil-square-o"></i><span>Exam Creation</span></a>
+		   </li>
+		   <li>
+			   <a href="exam-schedule.html" title="Exam Scheduler">
+				   <i class="fa fa-calendar"></i><span>Exam Scheduler</span></a>
+		   </li>
+		   <li>
+			   <a href="candidate-data.html" title="Candidate Data">
+				   	<i class="fa fa-users"></i><span>Candidate Data</span></a>
+		   </li>
+		   <li>
+			   <a href="candidate-result.html" title="Candidate Result" class="active-dashlink">
+				    <i class="fa fa-check-square"></i><span>Candidate Result</span></a>
+		   </li>
+		   <li data-toggle="modal" data-target="#reset-Modal" >
+			   <a href="javascript:void(0)" title="Reset Password">
+				   <i class="fa fa-key side-icon"></i><span>Reset Password</span></a>
+		   </li>
+		   <li data-toggle="modal" data-target="#forgot-Modal">
+			   <a href="javascript:void(0)" title="Forgot Password">
+				   <i class="fa fa-lock side-icon"></i><span>Forgot Password</span></a>
+		   </li>
+		   <li>
+			   <a href="javascript:void(0)" class="side-link" title="Logout">
+				   <i class="fa fa-sign-out side-icon"></i><span>Logout</span></a>
+		   </li>
+		</ul>
+		<div class="nav-btn">
+			<a class="open-nav" id="open" onclick="openSideBar()" title="Click to open"> 
+				<i class="fa fa-angle-double-right open-icon"></i>
+			</a>
+			<a class="cls-btn" id="close" onclick="closeSideBar()" title="click to close"> 
+				 <i class="fa fa-angle-double-left cls-icon"></i>
+			</a>
+		</div>	
+	</aside>
+	<!-- sidebar end -->
+	
+	
+	<!--main content start-->
+	<main id="main">
+		<div class="dash-content">
+			<div class="subject-container">
+				<div class="candidate-heading">
+					Candidate Result
+				</div>
+				<div class="view-sub-heading">
+					Listing of Result :
+				</div>
+				<div class="subject-table">
+					<table class="table table-responsive">
+						<thead class="t-head">
+							<tr>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Email</th>
+								<th>Total Questions</th>
+								<th>Attempted Questions</th>
+								<th>Unattempted Questions</th>
+								<th>Correct</th>
+								<th>Wrong</th>
+								<th>Marks</th>
+								<th>View</th>
+							</tr>
+						</thead>
+						<tbody class="t-body">
+							<tr class="t-row">
+								<td><span>Ankita</span></td>
+								<td><span>Rajput</span></td>
+								<td><span>abc@gmail.com</span></td>
+								<td><span>5</span></td>
+								<td><span>3</span></td>
+								<td><span>2</span></td>
+								<td><span>2</span></td>
+								<td><span>1</span></td>
+								<td><span>2</span></td>
+								<td><a href="view-result.html" title="view result" class="view-icon">
+								</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!--main content end-->
+			
+	<!--Forgot password Modal start-->
+	<div class="modal fade" id="forgot-Modal" role="dialog">
+		<div class="modal-form wow slideInDown">
+			<div class="modal-content">
+				<div class="modal-form-container">
+					<button type="button" class="close modal-close-btn" data-dismiss="modal">&times;</button>
+					<div class="modal-form-heading">
+						<img src="img/password.png" alt="forgot password" width="60" height="60">
+						<h3>Forgot Password?</h3>
+						<p>You can reset your password here..</p>
+					</div>
+					<div class="modal-form-content">
+						<form>
+							<div class="form-group input-box">
+								<label class="inp-label"><i class="fa fa-envelope icon"></i></label>
+								<input type="email" class="inp-field" name="email" placeholder="Your Email..">
+								<span class="focus-border"></span>
+							</div>
+							<div class="form-btn">
+								<button type="submit" class="btn login-btn">Send</button>
+							</div>	
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Forgot password Modal end-->
+			
+	<!--Reset password Modal start-->
+	<div class="modal fade" id="reset-Modal" role="dialog">
+		<div class="modal-form wow slideInDown">
+			<div class="modal-content">
+				<div class="modal-form-container">
+					<button type="button" class="close modal-close-btn" data-dismiss="modal">&times;</button>
+					<div class="modal-form-heading">
+						<img src="img/reset.png" alt="reset password" width="50" height="50">
+						<h3>Change Password</h3>
+						<p>You can reset your password here..</p>
+					</div>
+					<div class="modal-form-content">
+						<form>
+							<div class="form-group input-box">
+								<label class="inp-label"><i class="fa fa-lock icon"></i></label>
+								<input type="password" class="inp-field" name="password" placeholder="Current password..">
+								<span class="focus-border"></span>
+							</div>
+							<div class="form-group input-box">
+								<label class="inp-label"><i class="fa fa-lock icon reset-icon"></i></label>
+								<input type="password" class="inp-field" name="password" placeholder="New password..">
+								<span class="focus-border"></span>
+							</div>
+							<div class="form-group input-box">
+								<label class="inp-label"><i class="fa fa-lock icon reset-icon"></i></label>
+								<input type="password" class="inp-field" name="password" placeholder="Re-enter password..">
+								<span class="focus-border"></span>
+							</div>
+							<div class="form-btn">
+								<button type="submit" class="btn login-btn">Confirm</button>
+							</div>	
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Reset password Modal end-->
+
+<script src="js/index.js"></script>	
+<script src="js/wow.js"></script>
+<script>
+   new WOW().init();
+</script>	
+</body>
+</html>
+
+
